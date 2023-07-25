@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/blogs
+    password: vinod
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: 'true'
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+  security:
+    enabled: 'false'
+server:
+  port: '9090'
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
